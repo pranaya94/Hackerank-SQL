@@ -1,0 +1,6 @@
+select * from (select city, length(city) from station as c1 order by length(city) asc, city asc) as c2 LIMIT 1;
+
+select * from (select city, length(city) from station as c3 order by length(city) desc, city asc) as c4 LIMIT 1;
+
+select * from c2 UNION select * from c4;
+
