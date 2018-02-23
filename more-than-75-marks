@@ -1,0 +1,2 @@
+select name from(
+    select name, substr(name,-3,3) as s from students as c1 where marks > 75 order by s asc, id asc) as c2;
