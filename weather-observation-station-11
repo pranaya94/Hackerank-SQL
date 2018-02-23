@@ -1,0 +1,5 @@
+select distinct(city) from
+(select city from station as c1 where city not like "a%" and city not like "e%" and city not like "i%" and city not like "o%" and city not like "u%"
+union
+select city from station as c2 where city not like "%a" and city not like "%e" and city not like "%i" and city not like "%o" and city not like "%u") 
+as c3
