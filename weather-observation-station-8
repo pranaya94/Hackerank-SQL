@@ -1,0 +1,2 @@
+select city from(
+select city from station as c1 where city like "a%" or city like "e%" or city like "i%" or city like "o%" or city like "u%") as c2 where city like "%a" or city like "%e" or city like "%i" or city like "%o" or city like "%u";
