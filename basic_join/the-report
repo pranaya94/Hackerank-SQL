@@ -1,0 +1,4 @@
+select if(t2.grade<8,NULL,t2.name), t2.grade, t2.marks from(
+select students.name, students.marks, grades.grade from students inner join grades
+on students.marks >= grades.min_mark and students.marks <= max_mark
+    ) as t2 order by t2.grade desc, t2.name asc,t2.marks asc;
