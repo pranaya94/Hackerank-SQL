@@ -1,0 +1,6 @@
+select monthly_sal, count(*) from (
+select salary*months as monthly_sal from employee as t3 where salary*months in (
+select max(earnings) from (
+select *, months*salary as earnings from employee as t1) as t2
+)
+) as t4 group by monthly_sal;
